@@ -3,7 +3,7 @@ import { IProductItem } from "../../types";
 export interface IBasketModel {
   basketProducts: IProductItem[];
   getCounter: () => number;
-  getSumAllProducts: () => number;
+  getSum: () => number;
   addSelectedСard(data: IProductItem): void;
   deleteSelectedCard(item: IProductItem): void;
   clearBasket(): void
@@ -12,7 +12,7 @@ export interface IBasketModel {
 export class BasketModel implements IBasketModel {
   basketProducts: IProductItem[];
   getCounter: () => number;
-  getSumAllProducts: () => number;
+  getSum: () => number;
   addSelectedСard(data: IProductItem): void {
     throw new Error("Method not implemented.");
   }

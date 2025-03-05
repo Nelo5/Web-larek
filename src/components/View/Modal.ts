@@ -7,8 +7,8 @@ export interface IModal {
 }
 
 export class Modal implements IModal {
-  protected modalContainer: HTMLElement;
-  protected closeButton: HTMLButtonElement;
+  protected _modalContainer: HTMLElement;
+  protected _closeButton: HTMLButtonElement;
   protected _content: HTMLElement;
   protected _pageWrapper: HTMLElement;
   

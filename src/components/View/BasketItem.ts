@@ -6,7 +6,7 @@ export interface IBasketItem {
 	index:HTMLElement;
 	title: HTMLElement;
 	price: HTMLElement;
-	deleteButton: HTMLButtonElement;
+	button: HTMLButtonElement;
 	render(data: IProductItem, ind: number): HTMLElement;
 }
 
@@ -15,7 +15,7 @@ export class BasketItem implements IBasketItem {
 	index: HTMLElement;
 	title: HTMLElement;
 	price: HTMLElement;
-	deleteButton: HTMLButtonElement;
+	button: HTMLButtonElement;
 	render(data: IProductItem, ind: number): HTMLElement {
 		throw new Error("Method not implemented.");
 	}

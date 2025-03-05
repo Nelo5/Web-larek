@@ -3,16 +3,16 @@ import { IEvents } from "../base/events";
 export interface IContacts {
   formContacts: HTMLFormElement;
   inputs: HTMLInputElement[];
-  buttonSubmit: HTMLButtonElement;
-  formErrors: HTMLElement;
+  button: HTMLButtonElement;
+  errors: HTMLElement;
   render(): HTMLElement;
 }
 
 export class Contacts implements IContacts {
   formContacts: HTMLFormElement;
   inputs: HTMLInputElement[];
-  buttonSubmit: HTMLButtonElement;
-  formErrors: HTMLElement;
+  button: HTMLButtonElement;
+  errors: HTMLElement;
 
   constructor(template: HTMLTemplateElement, protected events: IEvents) {
   }
