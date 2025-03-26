@@ -16,6 +16,10 @@ export interface IOrder{
   items: string[];
 }
 
+// export interface IOrder extends IOrderForm{
+//   items: string[];
+// }
+
 export interface IOrderResult {
   id: string;
   total: number;

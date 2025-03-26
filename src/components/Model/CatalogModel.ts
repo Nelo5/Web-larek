@@ -8,10 +8,25 @@ export interface ICatalogModel {
 }
 
 export class CatalogModel implements ICatalogModel {
-  productCards: IProductItem[];
+  protected _productCards: IProductItem[];
   selectedСard: IProductItem;
+
+  constructor(protected events: IEvents) {
+    this._productCards = []
+  }
+
+  set productCards(data: IProductItem[]) {
+    this._productCards = data;
+    this.events.emit('productCards:receive');
+  }
+
+  get productCards() {
+    return this._productCards;
+  }
+
   openPreview(item: IProductItem): void {
-    throw new Error("Method not implemented.");
+    this.selectedСard = item;
+    this.events.emit('modalCard:open', item)
   }
 
 }
